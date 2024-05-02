@@ -15,9 +15,11 @@ function findTriangleClicked() {
   const angleB = Math.acos((side3 ** 2 + side1 ** 2 - side2 ** 2) / (2 * side3 * side1)) * (180 / Math.PI)
   const angleC = Math.acos((side1 ** 2 + side2 ** 2 - side3 ** 2) / (2 * side1 * side2)) * (180 / Math.PI)
 
-  const sumOfAngles = Number((angleA).toFixed(2)) + Number((angleB).toFixed(2)) + Number((angleC).toFixed(2))
+  const sumOfAngles = Math.round(Number((angleA).toFixed(2)) + Number((angleB).toFixed(2)) + Number((angleC).toFixed(2)))
 
-  if (side1 == side2 == side3) {
+  console.log(sumOfAngles)
+
+  if ((side1 == side2) && (side2 == side3)) {
     if (sumOfAngles == 180) {
     document.getElementById("answer").innerHTML = "This is an equilateral triangle."
     }
