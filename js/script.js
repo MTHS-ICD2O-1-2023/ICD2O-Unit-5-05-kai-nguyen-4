@@ -27,7 +27,7 @@ function findTriangleClicked() {
     if (sumOfAngles == 180) {
     document.getElementById("answer").innerHTML = " This is an isosceles triangle."
     }
-  } else if (side1 != side2 != side3) {
+  } else if ((side1 != side2) && (side2 != side3) && (side1 != side3)){
     if (sumOfAngles == 180) {
     document.getElementById("answer").innerHTML = "This is a scalene triangle."
     }
